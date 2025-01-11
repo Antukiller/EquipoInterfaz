@@ -2,7 +2,7 @@ package antukiller.models
 
 class jugadorDefensa(dorsal : Int): Jugador(dorsal), defensa {
     override fun defender() {
-        println("Está defendiendo...")
+        println("Está defendiendo")
     }
 
     override fun entrenar() {

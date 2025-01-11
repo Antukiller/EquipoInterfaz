@@ -3,36 +3,38 @@ package antukiller
 import antukiller.models.*
 
 fun main() {
-    val jugadorPortero = jugadorPortero(dorsal = 1)
-    val jugadorDefensas = jugadorDefensa(dorsal = 4)
-    val jugadorCentrocampista   = jugadorCentrocampista(dorsal = 8)
-    val jugadorDelantero = jugadorDelantero(dorsal = 1)
+    val entrenador = Entrenador(experiencia = 8)
+    val portero = jugadorPortero(dorsal = 1)
+    val defensa = jugadorDefensa(dorsal = 4)
+    val centrocampista = jugadorCentrocampista(dorsal = 8)
+    val delantero = jugadorDelantero(dorsal = 9)
+
+    entrenador.experiencia
+    entrenador.entrenar()
+    entrenador.imprimirExperiencia()
 
     println()
-    jugadorDelantero.imprimirDorsal()
-    jugadorDelantero.jugar()
-    jugadorDelantero.entrenar()
-    jugadorDelantero.chutar()
+    delantero.imprimirDorsal()
+    delantero.jugar()
+    delantero.entrenar()
+    delantero.chutar()
 
     println()
-    jugadorCentrocampista.imprimirDorsal()
-    jugadorCentrocampista.jugar()
-    jugadorCentrocampista.entrenar()
-    jugadorCentrocampista.pasar()
+    centrocampista.imprimirDorsal()
+    centrocampista.jugar()
+    centrocampista.entrenar()
+    centrocampista.pasar()
 
     println()
-    jugadorDefensas.imprimirDorsal()
-    jugadorDefensas.jugar()
-    jugadorDefensas.entrenar()
-    jugadorDefensas.defender()
+    defensa.imprimirDorsal()
+    defensa.jugar()
+    defensa.entrenar()
+    defensa.defender()
 
     println()
-    jugadorPortero.imprimirDorsal()
-    jugadorPortero.entrenar()
-    jugadorPortero.jugar()
-    jugadorPortero.parar()
+    portero.imprimirDorsal()
+    portero.entrenar()
+    portero.jugar()
+    portero.parar()
 
- if (jugadorPortero is jugadorDelantero) {
-     (jugadorPortero as jugadorDelantero).chutar()
- }
 }
