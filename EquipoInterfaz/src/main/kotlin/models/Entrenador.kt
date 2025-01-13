@@ -1,9 +1,9 @@
 package antukiller.models
 
 interface Entrenador : Rol {
+    override fun posicion()
     fun dirigir()
 
-    override fun posicion()
 
 
 }
