@@ -4,7 +4,7 @@ import antukiller.models.*
 
 fun main() {
 
-    val mediocentro: Centrocampista = Midfielder("pepe", "Pepe", 14,)
+    val mediocentro: Centrocampista = Midfielder("Toni", "Kroos", 33,)
     val delantero: Delantero = Striker("Rodrigo", "Goes",23)
 
     println()
