@@ -3,38 +3,23 @@ package antukiller
 import antukiller.models.*
 
 fun main() {
-    val entrenador = Entrenador(experiencia = 8)
-    val portero = jugadorPortero(dorsal = 1)
-    val defensa = jugadorDefensa(dorsal = 4)
-    val centrocampista = jugadorCentrocampista(dorsal = 8)
-    val delantero = jugadorDelantero(dorsal = 9)
 
-    entrenador.experiencia
-    entrenador.entrenar()
-    entrenador.imprimirExperiencia()
+    val mediocentro: Centrocampista = Midfielder("pepe", "Pepe", 14,)
+    val delantero: Delantero = Striker("Rodrigo", "Goes",23)
 
     println()
-    delantero.imprimirDorsal()
-    delantero.jugar()
-    delantero.entrenar()
+    mediocentro.pasar()
+    mediocentro.posicion()
+
+    println()
     delantero.chutar()
+    delantero.posicion()
 
     println()
-    centrocampista.imprimirDorsal()
-    centrocampista.jugar()
-    centrocampista.entrenar()
-    centrocampista.pasar()
+    if (mediocentro is Entrenador) {
+        (mediocentro as Entrenador).dirigir()
+    }
 
-    println()
-    defensa.imprimirDorsal()
-    defensa.jugar()
-    defensa.entrenar()
-    defensa.defender()
 
-    println()
-    portero.imprimirDorsal()
-    portero.entrenar()
-    portero.jugar()
-    portero.parar()
 
 }

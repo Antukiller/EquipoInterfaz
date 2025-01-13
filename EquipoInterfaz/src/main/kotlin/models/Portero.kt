@@ -1,9 +1,7 @@
 package antukiller.models
 
-interface Entrenador : Rol {
-    fun dirigir()
-
+interface Portero : Rol {
     override fun posicion()
 
-
+    fun blocar()
 }
